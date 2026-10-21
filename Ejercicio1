@@ -1,0 +1,54 @@
+
+package fis.poo.ccu1ejemplosArrayLista;
+import java.util.ArrayList;
+
+
+public class Ejercicio1 {
+    public static void main (String[] args){
+        ArrayList <String> frutas = new ArrayList<>();
+        //importar biblioteca, indicar el tipo de dato a almacenar, nombre
+        frutas.add("pera");
+        frutas.add("uva");
+        frutas.add(1,"mango");
+        //Recibe el índice y el objeto, es decir, poe al mango en posicion 1
+        System.out.println(frutas.toString());
+        //EL to.String casi o es necesario, SI lo es cuando el objet es nulo
+        System.out.println(frutas.size());
+        System.out.println(frutas.get(2));
+        frutas.set(0, "kiwi");
+        //Le remplaza, no es lo mismo que .add . Lo sobreesribe
+        System.out.println(frutas);
+        frutas.remove("uva");
+        //Lo elimina
+        System.out.println(frutas);
+        
+        if(frutas.remove("uvo"))
+        //el remove devuelve un booleano
+        {
+            System.out.println("Se eliminó uvo");
+        }
+        else
+        {
+            System.out.println("No existe uvo");
+        }
+        
+        System.out.println(frutas);
+        System.out.println(frutas.contains("mango"));
+        //devuelve un booleano el contains
+        System.out.println(frutas.indexOf("kiwi"));
+        System.out.println(frutas.indexOf("uvo"));
+        
+        frutas.clear();
+        //elimina todos los elemtos
+        
+        System.out.println(frutas.size()+" " + frutas.isEmpty());
+        //frutas.isEmpty devuelve booleano, true si esta vacio, false si no está vacío
+        
+        
+        
+        
+        
+        //set = modificar, configurar
+        //get = obtener
+    }
+}
